@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_YCIT_LIB_DBIT023'
+@MappingRole: true
+define role ZC_YCIT_LIB_DBIT023 {
+  grant select on ZC_YCIT_LIB_DBIT023
+  where INHERITING CONDITIONS FROM ENTITY ZR_YCIT_LIB_DBIT023 REPLACING { ROOT WITH _BaseEntity };
+}

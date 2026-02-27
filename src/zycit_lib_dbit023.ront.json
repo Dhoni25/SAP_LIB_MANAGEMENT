@@ -1,0 +1,10 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Type ZYCIT_LIB_DBIT023",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "typeCategory": "businessObject",
+  "name": "ZYCIT_LIB_DBIT023"
+}

@@ -1,0 +1,54 @@
+managed implementation in class ZBP_R_YCIT_LIB_DBIT023 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_YCIT_LIB_DBIT023 alias ZrYcitLibDbit023
+persistent table YCIT_LIB_DBIT023
+extensible
+draft table ZYCT_LB_DBT023_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   BookID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   BookID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for YCIT_LIB_DBIT023 corresponding extensible
+  {
+    BookID = BOOK_ID;
+    BookName = BOOK_NAME;
+    Author = AUTHOR;
+    Category = CATEGORY;
+    Price = PRICE;
+    Currency = CURRENCY;
+    PublishYear = PUBLISH_YEAR;
+    Status = STATUS;
+    Quantity = QUANTITY;
+    Isbn = ISBN;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}
